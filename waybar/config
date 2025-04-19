@@ -1,0 +1,104 @@
+{
+	"position": "top",
+	"height": 27,
+	"width": "auto",
+	"spacing": 5,
+
+    "modules-left": [ "hyprland/workspaces",   "hyprland/window"  ],
+    "modules-center": ["clock"],
+    "modules-right": ["tray",  "custom/dunst", "network",   "backlight", "pulseaudio", "hyprland/language", "battery"],
+
+
+	
+       "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+        "hyprland/window": {
+      "format": "{}",
+      "icon":true,
+      "max-length": 80,
+      "rewrite": {
+        "": "Activity"
+      },
+      "separate-outputs": true,
+    },
+
+	    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 15,
+            "critical": 5
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"],
+        "interval": 1,
+    },
+
+        "network": {
+        "interface": "wlp3s0", // (Optional) To force the use of this interface
+        "format-wifi": "({signalStrength}%) ",
+        "tooltip-format-wifi": "{ifname}: {ipaddr}/{cidr} ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "",
+        "format-alt": "{essid}: ({bandwidthDownBits} {bandwidthUpBits}) ",
+        "interval": 1,
+    },
+
+        "custom/dunst": {
+        "exec": "~/.config/waybar/scripts/dunst.sh",
+        "on-click": "dunstctl set-paused toggle",
+        "restart-interval": 1,
+    },
+
+	    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "active": " ",
+      },
+      "sort-by-number": true,
+      "persistent-workspaces": {
+        "*": 5, // 5 workspaces by default on every monitor
+        "HDMI-A-1": 3 // but only three on HDMI-A-1
+      },
+    },
+
+    "tray": {
+		"icon-size": 14,
+		"spacing": 15
+    },
+
+    "pulseaudio": {
+		"scroll-step": 5,
+		"format": "{icon}{volume}%",
+		"format-icons": {
+			"default": [" ", " ", " "]
+		},
+		"on-click": "pavucontrol"
+	},
+
+	"hyprland/language": {
+		"format": "{}",
+		"format-en": "EN",
+		"format-ru": "RU",
+	},
+    
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+
+	"escape": true,
+	"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+}
+

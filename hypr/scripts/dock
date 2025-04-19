@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if pgrep -f "nwg-dock-hyprland" > /dev/null
+then
+    pkill -f nwg-dock-hyprland
+
+else
+    nwg-dock-hyprland  -i 32 -mb 10 -x -c /home/farid/.config/rofi/fullscreen.sh -lp start > /dev/null &
+fi
+
