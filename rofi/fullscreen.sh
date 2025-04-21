@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+
 dir="$HOME/.config/rofi/launchers"
-theme='style-5'
+theme='style-2'
 
 ## Run
 rofi \
-    -show run \
+    -show drun \
     -theme ${dir}/${theme}.rasi
