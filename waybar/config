@@ -68,8 +68,8 @@
       },
       "sort-by-number": true,
       "persistent-workspaces": {
-        "*": 5, // 5 workspaces by default on every monitor
-        "HDMI-A-1": 3 // but only three on HDMI-A-1
+        "*": 0, // workspaces by default on every monitor
+        "DP-2": 0 // workspaces for DP-2
       },
     },
 
