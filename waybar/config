@@ -18,7 +18,7 @@
 
         "hyprland/window": {
       "format": "{}",
-      "icon":true,
+      "icon":false,
       "max-length": 80,
       "rewrite": {
         "": "Activity"
@@ -68,7 +68,7 @@
       },
       "sort-by-number": true,
       "persistent-workspaces": {
-        "*": 0, // workspaces by default on every monitor
+        "*": 5, // workspaces by default on every monitor
         "DP-2": 0 // workspaces for DP-2
       },
     },
