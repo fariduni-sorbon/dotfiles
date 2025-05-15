@@ -10,20 +10,19 @@
 
 
 	
-       "backlight": {
-        // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+      "backlight": {
+      "format": "{percent}% {icon}",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
 
-        "hyprland/window": {
+      "hyprland/window": {
       "format": "{}",
       "icon":false,
       "max-length": 80,
       "rewrite": {
         "": "Activity"
       },
-      "separate-outputs": true,
+      "separate-outputs": true
     },
 
 	    "battery": {
@@ -39,7 +38,7 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"],
-        "interval": 1,
+        "interval": 1
     },
 
         "network": {
@@ -51,26 +50,26 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "",
         "format-alt": "{essid}: ({bandwidthDownBits} {bandwidthUpBits}) ",
-        "interval": 1,
+        "interval": 1
     },
 
         "custom/dunst": {
         "exec": "~/.config/waybar/scripts/dunst.sh",
         "on-click": "dunstctl set-paused toggle",
-        "restart-interval": 1,
+        "restart-interval": 1
     },
 
 	    "hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": " ",
+        "active": " "
       },
       "sort-by-number": true,
       "persistent-workspaces": {
         "*": 5, // workspaces by default on every monitor
         "DP-2": 0 // workspaces for DP-2
-      },
+      }
     },
 
     "tray": {
@@ -90,15 +89,13 @@
 	"hyprland/language": {
 		"format": "{}",
 		"format-en": "EN",
-		"format-ru": "RU",
+		"format-ru": "RU"
 	},
     
 	"clock": {
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format-alt": "{:%Y-%m-%d}"
-	},
-
-	"escape": true,
-	"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+		// "format-alt": "{:%Y-%m-%d}"
+     "format-alt": "{:%d-%m-%Y}"
+	}
 }
 
