@@ -68,7 +68,8 @@
       "sort-by-number": true,
       "persistent-workspaces": {
         "*": 5, // workspaces by default on every monitor
-        "DP-2": 0 // workspaces for DP-2
+        "DP-2": 0, // workspaces for DP-2
+        "DP-1": 0 // workspaces for DP-2
       }
     },
 

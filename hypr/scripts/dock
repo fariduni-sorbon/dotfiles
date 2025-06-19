@@ -8,3 +8,4 @@ else
     nwg-dock-hyprland  -i 32 -mb 10 -x -c /home/farid/.config/rofi/fullscreen.sh -lp start > /dev/null &
 fi
 
+# -nolauncher - for hide app launcher
